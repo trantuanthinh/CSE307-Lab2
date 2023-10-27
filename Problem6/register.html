@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <form>
+      <header>
+        <h1><center>ĐĂNG KÝ THÀNH VIÊN</center></h1>
+      </header>
+    </form>
+
+    <fieldset>
+      <legend><b>Thông tin cá nhân</b></legend>
+      <table>
+        <tr>
+          <td>Họ và tên:</td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td>
+            <!-- Create day -->
+            <label for="day">Ngày sinh:</label>
+          </td>
+          <td>
+            <select id="day" name="day">
+              <option value="" selected disabled>Select a day</option>
+            </select>
+            <script>
+              var daySelect = document.getElementById("day");
+              for (var i = 1; i <= 31; i++) {
+                var option = document.createElement("option");
+                var dayNumber = i < 10 ? "0" + i : i.toString();
+                option.value = dayNumber;
+                option.textContent = dayNumber;
+                daySelect.appendChild(option);
+              }
+            </script>
+            <!-- Create month -->
+            <label for="month">Tháng:</label>
+            <select id="month" name="month">
+              <option value="" selected disabled>Select a month</option>
+            </select>
+            <script>
+              var monthSelect = document.getElementById("month");
+              for (var i = 1; i <= 12; i++) {
+                var option = document.createElement("option");
+                var monthNumber = i < 10 ? "0" + i : i.toString();
+                option.value = monthNumber;
+                option.textContent = monthNumber;
+                monthSelect.appendChild(option);
+              }
+            </script>
+            <label for="year">Năm:</label>
+            <input type="number" style="width: 50px" />
+          </td>
+        </tr>
+        <tr>
+          <td>Giới tính:</td>
+          <td>
+            <input type="radio" name="gender" /><label>Nam</label
+            ><input type="radio" name="gender" /><label>Nữ</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Địa chỉ:</td>
+          <td><textarea name="" id="" cols="20" rows="3"></textarea></td>
+        </tr>
+        <tr>
+          <td>Điện thoại:</td>
+          <td><input type="number" /></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td><input type="text" /></td>
+        </tr>
+      </table>
+    </fieldset>
+    <fieldset>
+      <legend><b> Thông tin đăng nhập</b></legend>
+      <table>
+        <tr>
+          <td>Tên đăng nhập:</td>
+          <td><input type="text" required /></td>
+        </tr>
+        <tr>
+          <td>Mật khẩu:</td>
+          <td><input type="text" required /></td>
+        </tr>
+        <tr>
+          <td>Nhập lại mật khẩu:</td>
+          <td><input type="text" /></td>
+        </tr>
+      </table>
+    </fieldset>
+    <p>
+      <center>
+        <input type="submit" value="Đăng ký" />
+        <input type="submit" value="Hủy" />
+      </center>
+    </p>
+  </body>
+</html>
