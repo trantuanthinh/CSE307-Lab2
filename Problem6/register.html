@@ -6,10 +6,10 @@
     <title>Register</title>
   </head>
   <body>
-    <form name="dangnhap" method="get" action="#">
-      <header>
-        <h1><center>ĐĂNG KÝ THÀNH VIÊN</center></h1>
-      </header>
+    <header>
+      <h1><center>ĐĂNG KÝ THÀNH VIÊN</center></h1>
+    </header>
+    <form name="dangky" method="get" action="#">
       <fieldset>
         <legend><b>Thông tin cá nhân</b></legend>
         <table>
@@ -72,7 +72,7 @@
           </tr>
           <tr>
             <td>Email:</td>
-            <td><input type="text" /></td>
+            <td><input type="email" required /></td>
           </tr>
         </table>
       </fieldset>
@@ -85,18 +85,18 @@
           </tr>
           <tr>
             <td>Mật khẩu:</td>
-            <td><input type="text" required /></td>
+            <td><input type="password" required /></td>
           </tr>
           <tr>
             <td>Nhập lại mật khẩu:</td>
-            <td><input type="text" required /></td>
+            <td><input type="password" required /></td>
           </tr>
         </table>
       </fieldset>
       <p>
         <center>
           <input type="submit" value="Đăng ký" />
-          <input type="submit" value="Hủy" />
+          <input type="reset" value="Hủy" />
         </center>
       </p>
     </form>
